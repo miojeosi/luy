@@ -1,0 +1,65 @@
+﻿<Page x:Class="CalendarApp.Views.CalendarView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CalendarApp.Views" 
+      xmlns:local1="clr-namespace:CalendarApp.Resources" 
+      xmlns:viewmodels="clr-namespace:CalendarApp.ViewModels" 
+      d:DataContext="{d:DesignInstance Type=viewmodels:CalendarViewModel}"
+      DataContext="{Binding CalendatViewModel, Source={StaticResource locator}}"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      
+      Title="CalendarView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="50"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition MinWidth="50"/>
+        </Grid.ColumnDefinitions>
+
+
+
+            <Button 
+                Grid.Column="0" 
+                HorizontalAlignment="Right" 
+                Style="{StaticResource IconBtnStyle}"
+                Command="{Binding PrevMonthCommand}">
+                <Image Source="\Resources\Images\Left.png"/>
+            </Button>
+
+            <local1:DatePickerElement HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1"/>
+
+            <TextBlock FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding SelectedDate, StringFormat='MMMM yyyy г.', ConverterCulture=ru-RU}" Grid.Column="1"/>
+
+            <Button 
+                Grid.Column="2" 
+                HorizontalAlignment="Left" 
+                Style="{StaticResource IconBtnStyle}"
+                Command="{Binding NextMonthCommand}">
+                <Image Source="\Resources\Images\Right.png"/>
+            </Button>
+
+            <ItemsControl Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Days}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+
+                    <local1:CalendarBtn Width="50" Height="50" Margin="5" DataContext="{Binding }"/>
+
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel></WrapPanel>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </Grid>
+</Page>

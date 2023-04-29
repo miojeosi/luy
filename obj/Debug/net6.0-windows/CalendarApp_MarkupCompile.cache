@@ -1,0 +1,20 @@
+﻿CalendarApp
+
+
+winexe
+C#
+.cs
+C:\Users\Светлана\OneDrive\Рабочий стол\Calendar\CalendarApp\obj\Debug\net6.0-windows\
+CalendarApp
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Users\Светлана\OneDrive\Рабочий стол\Calendar\CalendarApp\App.xaml
+10-1966883841
+
+211885476256
+199214946455
+MainWindow.xaml;Resources\CalendarBtn.xaml;Resources\Converters.xaml;Resources\DatePickerElement.xaml;Resources\Images.xaml;Resources\LocalDatePicker.xaml;Resources\LocatorRes.xaml;Resources\Styles.xaml;Views\CalendarView.xaml;Views\DayInfoView.xaml;
+
+False
+

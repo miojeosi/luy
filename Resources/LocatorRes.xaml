@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:local="clr-namespace:CalendarApp"
+                    xmlns:res="clr-namespace:CalendarApp.Resources"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <local:ServiceLocator x:Key="locator"></local:ServiceLocator>
+</ResourceDictionary>

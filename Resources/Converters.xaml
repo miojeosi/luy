@@ -1,0 +1,5 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:c="clr-namespace:CalendarApp.Resources"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <c:NotNullConverter x:Key="NotNullToVisibility"></c:NotNullConverter>
+</ResourceDictionary>

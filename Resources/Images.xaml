@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BitmapImage x:Key="runningImg"  UriSource="\Resources\Images\running.png"/>
+    <BitmapImage x:Key="turnikImg"  UriSource="\Resources\Images\turnik.png"/>
+    <BitmapImage x:Key="pressImg"  UriSource="\Resources\Images\press.png"/>
+    <BitmapImage x:Key="otchimaniyaImg"  UriSource="\Resources\Images\otzhimaniya.png"/>
+</ResourceDictionary>
